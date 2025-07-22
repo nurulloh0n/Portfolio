@@ -24,81 +24,80 @@
       header > a {
         text-decoration: none;
       }
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
 
-header h1 {
-  font-size: 1.5rem;
-  color: #00ffd5;
-}
+      header h1 {
+        font-size: 1.5rem;
+        color: #00ffd5;
+      }
 
-/* Default nav styles */
-nav {
-  display: flex;
-  gap: 20px;
-}
+      /* Default nav styles */
+      nav {
+        display: flex;
+        gap: 20px;
+      }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 8px 12px;
-  background: #00ffd5;
-  color: #000;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 8px 12px;
+        background: #00ffd5;
+        color: #000;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+      }
 
-nav a:hover {
-  background: #00d9b6;
-}
+      nav a:hover {
+        background: #00d9b6;
+      }
 
-/* Hamburger menu icon (hidden by default) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
+      /* Hamburger menu icon (hidden by default) */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
 
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #00ffd5;
-  margin: 4px 0;
-  transition: 0.3s;
-}
+      .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #00ffd5;
+        margin: 4px 0;
+        transition: 0.3s;
+      }
 
-/* Responsive menu */
-@media (max-width: 800px) {
-  nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    display: none;
-    padding: 20px;
-  }
+      /* Responsive menu */
+      @media (max-width: 800px) {
+        nav {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.9);
+          display: none;
+          padding: 20px;
+        }
 
-  nav.active {
-    display: flex;
-  }
+        nav.active {
+          display: flex;
+        }
 
-  .menu-toggle {
-    display: flex;
-  }
-}
-
+        .menu-toggle {
+          display: flex;
+        }
+      }
 
       section {
         padding: 100px 50px;
@@ -251,22 +250,14 @@ nav a:hover {
       }
     </style>
   </head>
-  <script>
-  const toggle = document.getElementById('menu-toggle');
-  const nav = document.querySelector('nav');
-
-  toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
 
   <body>
     <header>
       <div class="menu-toggle" id="menu-toggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <a href="index.html"><h1>Nurulloxon Valixonov</h1></a>
       <nav>
@@ -408,5 +399,13 @@ nav a:hover {
     <footer>
       <p>Nurulloxon Valixonov.</p>
     </footer>
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("header nav");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
