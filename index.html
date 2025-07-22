@@ -1,302 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Nurulloxon Valixonov" />
-  <title>Nurulloxon Valixonov - Portfolio</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #0d0d0d;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    header > a {
-      text-decoration: none;
-    }
-
-    header {
-        margin-top: 20px;
-        border-radius: 50px;
-        position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-      color: #00ffd5;
-    }
-
-    nav a {
-        padding: 5px;
-        background-color: #00d9b6;
-        border-radius: 10px;
-      color: #ffffff;
-      text-decoration: none;
-      margin-left: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #00ffd5;
-    }
-
-    section {
-      padding: 100px 50px;
-      min-height: 100vh;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #00ffd5;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-    }
-
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      background: #00ffd5;
-      color: #000;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #00d9b6;
-    }
-
-    .aboutme_title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00ffd5;
-    }
-
-    .aboutme_title2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 40px;
-      color: #00ffd5;
-    }
-
-    .aboutme_text {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .projects_title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00ffd5;
-    }
-
-    .projects, .achievements {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .projects_mini_titles , .achievements h3 {
-        text-align: center;
-    }
-
-    .honors_title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00ffd5;
-    }
-
-    .projects_mini_texts, .achievements p {
-        text-align: center;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .contactme_title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00ffd5;
-    }
-
-    .contactme_text {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: #ccc;
-    }
-
-    .contactme_phone, .contactme_gmail, .contactme_address {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #00ffd5;
-      margin-bottom: 10px;
-    }
-
-    .contactme_gmail a, .contactme_address a {
-      color: #00ffd5;
-      text-decoration: none;
-    }
-
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 10px 20px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Nurulloxon Valixonov" />
+    <title>Nurulloxon Valixonov - Portfolio</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
       }
+
+      body {
+        background: #0d0d0d;
+        color: #ffffff;
+        line-height: 1.6;
+      }
+
+      header > a {
+        text-decoration: none;
+      }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #00ffd5;
+}
+
+/* Default nav styles */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background: #00ffd5;
+  color: #000;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background: #00d9b6;
+}
+
+/* Hamburger menu icon (hidden by default) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #00ffd5;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive menu */
+@media (max-width: 800px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+
+      section {
+        padding: 100px 50px;
+        min-height: 100vh;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
       .hero h2 {
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #00ffd5;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="index.html"><h1>Nurulloxon V.</h1></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Activities</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h2>Hi, I'm Nurulloxon Valixonov</h2>
-    <p>A student, chess enthusiast, and aspiring programmer passionate about technology, problem-solving, and innovation.</p>
-    <a href="#projects"><button class="btn">See My Activities</button></a>
-  </section>
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+      }
 
-  <!-- About Section -->
-  <section id="about">
-    <h2 class="aboutme_title">About Me</h2>
-    <p class="aboutme_text">
-      I am a student at Rahimov School. I enjoy exploring front-end programming, Python, and building innovative tech projects. 
-      Besides academics, I am an active chess player and a strong believer in strategic thinking, teamwork, and continuous learning.
-    </p>
-    <br>
-    <h3 class="aboutme_title2">Skills & Languages</h3>
-    <ul class="aboutme_text">
-      <li>Front-end Programming (HTML, CSS, JavaScript)</li>
-      <li>Python Development</li>
-      <li>Time Management & Event Organization</li>
-      <li>Languages: Uzbek (Native), Russian (Fluent), English (B2), Japanese (Beginner)</li>
-    </ul>
-  </section>
+      .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: #00ffd5;
+        color: #000;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
 
-  <!-- Activities Section -->
-  <section id="projects">
-    <h2 class="projects_title">Extracurricular Activities</h2>
-    <div class="projects">
-      <div class="card">
-        <h3 class="projects_mini_titles">Online Chess Competition</h3>
-        <p class="projects_mini_texts">Organized and managed an online chess tournament with smooth event logistics (May 2025).</p>
-      </div>
-      <div class="card">
-        <h3 class="projects_mini_titles">Code Caravan Hackathon</h3>
-        <p class="projects_mini_texts">Participated in building an MVP for innovative tech solutions (July 2025).</p>
-      </div>
-      <div class="card">
-        <h3 class="projects_mini_titles">Chess Club</h3>
-        <p class="projects_mini_texts">Founded a school chess club to promote strategic thinking and competitive play (June 2025).</p>
-      </div>
-      <div class="card">
-        <h3 class="projects_mini_titles">Zakovat Club</h3>
-        <p class="projects_mini_texts">Actively engaged in quiz competitions and knowledge-sharing sessions (Feb 2025).</p>
-      </div>
-      <div class="card">
-        <h3 class="projects_mini_titles">Neo Hackathon</h3>
-        <p class="projects_mini_texts">Assisted with event logistics, setup, and coordination as a volunteer (June 2025).</p>
-      </div>
-    </div>
-  </section>
+      .btn:hover {
+        background: #00d9b6;
+      }
 
-  <!-- Achievements Section -->
-  <section id="achievements">
-    <h2 class="honors_title">Honors & Achievements</h2>
-    <div class="achievements">
-      <div class="card">
-        <h3>Rosatom Olympiad</h3>
-        <p>Advanced to the Republican stage of the Rosatom Olympiad (Feb 2025) by excelling in mathematics and problem-solving.</p>
-      </div>
-      <div class="card">
-        <h3>School Chess Tournament</h3>
-        <p>Winner among 25+ participants with strategic gameplay (March 2025).</p>
-      </div>
-      <div class="card">
-        <h3>Awards</h3>
-        <p>School Chess Champion (2025) and Best Defender of the Match (2025).</p>
-      </div>
-    </div>
-  </section>
+      .aboutme_title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ffd5;
+      }
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2 class="contactme_title">Contact Me</h2>
-    <p class="contactme_text">If you'd like to work with me or just say hello, feel free to reach out!</p>
-    <p class="contactme_phone">📱 +998(88)215-30-50</p>
-    <p class="contactme_gmail">✉️ <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=valihonovnurullahon@gmail.com" style="color:#00ffd5;">valihonovnurullahon@gmail.com</a></p>
-    <p class="contactme_address">🔗 <a target="_blank" href="https://www.linkedin.com/in/nurulloxon-valixonov-007160369" style="color:#00ffd5;">LinkedIn Profile</a></p>
-  </section>
+      .aboutme_title2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 40px;
+        color: #00ffd5;
+      }
 
-  <footer>
-    <p>Nurulloxon Valixonov.</p>
-  </footer>
-</body>
+      .aboutme_text {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .projects_title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ffd5;
+      }
+
+      .projects,
+      .achievements {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .projects_mini_titles,
+      .achievements h3 {
+        text-align: center;
+      }
+
+      .honors_title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ffd5;
+      }
+
+      .projects_mini_texts,
+      .achievements p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ccc;
+      }
+
+      .contactme_title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ffd5;
+      }
+
+      .contactme_text {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #ccc;
+      }
+
+      .contactme_phone,
+      .contactme_gmail,
+      .contactme_address {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #00ffd5;
+        margin-bottom: 10px;
+      }
+
+      .contactme_gmail a,
+      .contactme_address a {
+        color: #00ffd5;
+        text-decoration: none;
+      }
+
+      .card {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 10px 20px;
+        }
+        .hero h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.querySelector('nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
+  <body>
+    <header>
+      <div class="menu-toggle" id="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+      <a href="index.html"><h1>Nurulloxon Valixonov</h1></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Activities</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h2>Hi, I'm Nurulloxon Valixonov</h2>
+      <p>
+        A student, chess enthusiast, and aspiring programmer passionate about
+        technology, problem-solving, and innovation.
+      </p>
+      <a href="#projects"><button class="btn">See My Activities</button></a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="aboutme_title">About Me</h2>
+      <p class="aboutme_text">
+        I am a student at Rahimov School. I enjoy exploring front-end
+        programming, Python, and building innovative tech projects. Besides
+        academics, I am an active chess player and a strong believer in
+        strategic thinking, teamwork, and continuous learning.
+      </p>
+      <br />
+      <h3 class="aboutme_title2">Skills & Languages</h3>
+      <ul class="aboutme_text">
+        <li>Front-end Programming (HTML, CSS, JavaScript)</li>
+        <li>Python Development</li>
+        <li>Time Management & Event Organization</li>
+        <li>
+          Languages: Uzbek (Native), Russian (Fluent), English (B2), Japanese
+          (Beginner)
+        </li>
+      </ul>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="projects">
+      <h2 class="projects_title">Extracurricular Activities</h2>
+      <div class="projects">
+        <div class="card">
+          <h3 class="projects_mini_titles">Online Chess Competition</h3>
+          <p class="projects_mini_texts">
+            Organized and managed an online chess tournament with smooth event
+            logistics (May 2025).
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="projects_mini_titles">Code Caravan Hackathon</h3>
+          <p class="projects_mini_texts">
+            Participated in building an MVP for innovative tech solutions (July
+            2025).
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="projects_mini_titles">Chess Club</h3>
+          <p class="projects_mini_texts">
+            Founded a school chess club to promote strategic thinking and
+            competitive play (June 2025).
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="projects_mini_titles">Zakovat Club</h3>
+          <p class="projects_mini_texts">
+            Actively engaged in quiz competitions and knowledge-sharing sessions
+            (Feb 2025).
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="projects_mini_titles">Neo Hackathon</h3>
+          <p class="projects_mini_texts">
+            Assisted with event logistics, setup, and coordination as a
+            volunteer (June 2025).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+      <h2 class="honors_title">Honors & Achievements</h2>
+      <div class="achievements">
+        <div class="card">
+          <h3>Rosatom Olympiad</h3>
+          <p>
+            Advanced to the Republican stage of the Rosatom Olympiad (Feb 2025)
+            by excelling in mathematics and problem-solving.
+          </p>
+        </div>
+        <div class="card">
+          <h3>School Chess Tournament</h3>
+          <p>
+            Winner among 25+ participants with strategic gameplay (March 2025).
+          </p>
+        </div>
+        <div class="card">
+          <h3>Awards</h3>
+          <p>
+            School Chess Champion (2025) and Best Defender of the Match (2025).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="contactme_title">Contact Me</h2>
+      <p class="contactme_text">
+        If you'd like to work with me or just say hello, feel free to reach out!
+      </p>
+      <p class="contactme_phone">📱 +998(88)215-30-50</p>
+      <p class="contactme_gmail">
+        ✉️
+        <a
+          target="_blank"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=valihonovnurullahon@gmail.com"
+          style="color: #00ffd5"
+          >valihonovnurullahon@gmail.com</a
+        >
+      </p>
+      <p class="contactme_address">
+        🔗
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/nurulloxon-valixonov-007160369"
+          style="color: #00ffd5"
+          >LinkedIn Profile</a
+        >
+      </p>
+    </section>
+
+    <footer>
+      <p>Nurulloxon Valixonov.</p>
+    </footer>
+  </body>
 </html>
